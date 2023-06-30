@@ -16,5 +16,10 @@ const relogio = setInterval(function time() {  // function onde executa certos c
     horas.innerHTML = hr;  // usando a váriavel onde pegou a hora e inserindo no bloco
     minutos.innerHTML = min; // usando a váriavel onde pegou os minutos e inserindo no bloco
     segundos.innerHTML = seconds // usando a váriavel onde pegou os segundos e inserindo no bloco
+    
+    if ( hr >= 18 || hr <= 6) {   // caso o horário for menor que 6h da manhã ou maior que 6h da noite, o fundo vai ficar branco.
+      document.querySelector('#bgcronometro').style.backgroundColor = 'black'
+    }
+
 })
 
